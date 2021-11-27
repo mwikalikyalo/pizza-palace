@@ -1,0 +1,10 @@
+body{
+  background-image: url(../images/pizza-order.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+.order-up{
+  padding: 3%;
+}
