@@ -31,6 +31,10 @@ button{
 #button{
   padding: 3%;
 }
+a.order{
+  text-decoration: none;
+  color: white;
+}
 
 /*footer*/
 .foot{
