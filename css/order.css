@@ -1,8 +1,10 @@
+
 body{
   background-image: url(../images/pizza-order.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  text-align: center;
 }
 .order-up{
   padding: 3%;
@@ -11,4 +13,6 @@ body{
 form{
   padding: 2px;
   margin: 3px;
+  font-weight: bolder;
+  font-size: larger;
 }

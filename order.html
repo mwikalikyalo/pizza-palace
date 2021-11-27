@@ -13,27 +13,52 @@
   <div class="container-fluid">
     <div class="form">
       <h1 class="palace text-center">Welcome to Pizza Palace!<br> We'd like to take your order.</h1>
-        <form class="order-up">
-          <label for="Name" class="name">What pizza size do you want?</label><br>
-          <input type="text" id="name" required><br><br>
-              
-          <!--crust-->
-          <label for="crust" class="date">What type of crust do you want?</label><br>
-          <input type="text" id="crust" required><br><br>
-              
-          <!--toppings-->
-          <label for="amount" class="amount">What toppings do you want on your crust?</label><br>
-          <input type="text" id="toppings" required><br><br>
-              
-          <!--number-->
-          <label for="Items" class="items-bought">How many pizzas do you want?</label><br>
-          <input type="number" id="item" required><br><br>
+      <form id="orders">
+        <div class="form-group">
+          <div class="col-md-6">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Name...">
+          </div>
+        <br><br>
+        
+        <h5>Kindly pick the following:</h5>
+        <div class="form-group">
+          <div class="col-md-6">
+            <label for="pizza-flavor">Pizza crust</label>
+            <select class="form-control col-lg-4 col-md-6" id="pizza-flavor" required>
+                <option>Flat Bread</option>
+                <option>Thick crust</option>
+                <option>Pan Pizza crust</option>
+                <option>Cracker crust</option>
+                <option>Thin crust</option>
+                <option>Stuffed crust</option>
+            </select>
+          </div>
 
-          <!--button-->
-          <button class="btn-group btn-lg btn-warning">Order up</button>
-        </form>
-      </div>
-    </div>
+          <div class="col-md-6">
+            <label for="pizza-size">Pizza size</label>
+            <select class="form-control" id="pizza-size" required>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+          </div>
+          
+          <div class="col-md-6">
+            <label for="pizza-size">Pizza toppings</label>
+            <select class="form-control" id="pizza-size" required>
+                <option>Pepperoni and garlic</option>
+                <option>Mushrooms and green peppers</option>
+                <option>Extra cheese</option>
+                <option>Chicken periperi</option>
+                <option>Beef barbecuque</option>
+                <option>Hawaian(Pineapples)</option>
+            </select>
+          </div>
+
+            
+          
+       
 
     <!--social icons-->
     <footer class="foot">
