@@ -1,0 +1,16 @@
+body{
+  background-image: url(../images/pizza-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  position: fixed;
+}
+#palace{
+  text-decoration: underline;
+}
+.welcome{
+  text-align: center;
+  font-size: larger;
+  font-weight: 500;
+}
