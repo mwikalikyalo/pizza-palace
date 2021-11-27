@@ -13,6 +13,9 @@ body{
   font-size: larger;
   font-weight: 500;
 }
+.pizza{
+  padding: 5%;
+}
 
 /*menu*/
 .menu-size{
@@ -21,4 +24,15 @@ body{
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
   font-weight: 500;
+}
+button{
+  padding: 5px;
+}
+#button{
+  padding: 3%;
+}
+
+/*footer*/
+.foot{
+  padding: 3%;
 }
