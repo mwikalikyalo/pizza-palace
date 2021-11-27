@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:ital,wght@0,600;1,300&display=swap');
+body{
+  background-image: url(../images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+/*button*/
+a.menu{
+  text-decoration: none;
+  color: white;
+}
+button{
+  align-items: right;
+}
+#pizza-home{
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  font-size: 59px;
+}
+.home{
+  padding: 8%;
+  margin: 6%;
+  border: 3px solid yellow;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Raleway', sans-serif;
+}
+/*footer*/
+.foot{
+  padding: 3%;
+  background-color: rgba(0,255,0, o.6);
+  bottom: 20;
+}

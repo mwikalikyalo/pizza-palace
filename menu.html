@@ -4,71 +4,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>Pizza Palace</title>
 </head>
 <body>
-  <!--menu-->
-  <div class="container-fluid">
-    <div class="menu-size">
-      <h2 class="menu">Menu</h2>
-      <p class="intro text-centre"> We have an array of toppings and different types of crust.<br> 
-        Here are the options and their prices.
-      </p>
-      <div class="table-md">
-        <table class="table">
-          <tr class="types">
-            <th>Type of crust</th>
-            <th>Price(Ksh.)</th>
-            <th>Toppings</th>
-            <th>Price(Ksh.)</th>
-            <th>Size</th>
-          </tr>
-          <tr>
-            <td>Stuffed crust</td>
-            <td>600</td>
-            <td>Pepperoni and garlic</td>
-            <td>400</td>
-            <td>Small</td>
-          </tr>
-          <tr>
-            <td>Thin crust</td>
-            <td>500</td>
-            <td>Mushrooms and green peppers</td>
-            <td>300</td>
-            <td>Medium</td>
-          </tr>
-          <tr>
-            <td>Cracker crust</td>
-            <td>700</td>
-            <td>Extra Cheese</td>
-            <td>200</td>
-            <td>Large</td>
-          </tr>
-          <tr>
-            <td>Pan Pizza Crust</td>
-            <td>800</td>
-            <td>Chicken periperi</td>
-            <td>600</td>
-          </tr>
-          <tr>
-            <td>Thick crust</td>
-            <td>650</td>
-            <td>Beef barbecuque</td>
-            <td>550</td>
-          </tr>
-          <tr>
-            <td>Flat bread crust</td>
-            <td>550</td>
-            <td>Hawaian(Pineapples)</td>
-            <td>300</td>
-          </tr>
-        </table>
-      </div>  
+  <div class="container">
+    <div class="pizza">
+      <h1 id="palace">Pizza Palace.</h1>
+      <p class="welcome">Welcome to Pizza Palace! A casual dining restaurant serving locally 
+        sourced<br> ingredients for the best pizza in town.We make all your <br>cheesy, meaty or 
+        even vegan dreams come true with the various toppings selection. We are 
+        the <em>crustodians</em> of pizza love... and pizza humor. The best part is that you 
+        get involved in the whole process. You pick the type of crust you want, the toppings and the 
+        size of the pizza and we make it for you. How exciting is that?! Let's get started. </p>
     </div>
+    
+      
+    <!--menu-->
+      <div class="container-fluid">
+        <div class="menu-size">
+          <h2 class="menu">Menu</h2>
+          <p class="intro text-centre"> We have an array of toppings and different types of crust.<br> 
+            Here are the options and their prices.
+          </p>
+          <div class="table-md">
+            <table class="table">
+              <tr class="types">
+                <th>Type of crust</th>
+                <th>Price(Ksh.)</th>
+                <th>Toppings</th>
+                <th>Price(Ksh.)</th>
+                <th>Size</th>
+              </tr>
+              <tr>
+                <td>Stuffed crust</td>
+                <td>600</td>
+                <td>Pepperoni and garlic</td>
+                <td>400</td>
+                <td>Small</td>
+              </tr>
+              <tr>
+                <td>Thin crust</td>
+                <td>500</td>
+                <td>Mushrooms and green peppers</td>
+                <td>300</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>Cracker crust</td>
+                <td>700</td>
+                <td>Extra Cheese</td>
+                <td>200</td>
+                <td>Large</td>
+              </tr>
+              <tr>
+                <td>Pan Pizza Crust</td>
+                <td>800</td>
+                <td>Chicken periperi</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td>Thick crust</td>
+                <td>650</td>
+                <td>Beef barbecuque</td>
+                <td>550</td>
+              </tr>
+              <tr>
+                <td>Flat bread crust</td>
+                <td>550</td>
+                <td>Hawaian(Pineapples)</td>
+                <td>300</td>
+              </tr>
+            </table>
+          </div>  
+        </div>
+      </div>
+      
+    <div id="button">
+      <button class="btn-group btn-md btn-secondary"><a href="order.html" class="order">Order Now</a></button>
+    </div>    
   </div>
   
-<div id="button">
-  <button class="btn-group btn-md btn-secondary"><a href="order.html" class="order">Order Now</a></button>
-</div>
 </body>
 </html>
