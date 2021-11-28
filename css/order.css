@@ -16,7 +16,14 @@ form{
   margin: 3px;
   font-weight: bolder;
   font-size: larger;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 .foot{
   bottom: 20%;
+}
+a.order-up{
+  text-decoration: none;
+  color: white;
 }
