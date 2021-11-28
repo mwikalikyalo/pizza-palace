@@ -6,19 +6,19 @@ body{
   color: white;
   text-align: center;
 }
+h5.fill{
+  text-align: left;
+}
 .order-up{
   padding: 3%;
   left: 5%;
 }
-
 form{
   padding: 5%;
   margin: 3px;
   font-weight: bolder;
   font-size: larger;
   text-align: center;
-  display: flex;
-  align-items: center;
 }
 .foot{
   bottom: 20%;
