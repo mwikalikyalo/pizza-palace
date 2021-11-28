@@ -10,9 +10,13 @@ body{
   padding: 3%;
   left: 5%;
 }
+
 form{
-  padding: 2px;
+  padding: 5%;
   margin: 3px;
   font-weight: bolder;
   font-size: larger;
+}
+.foot{
+  bottom: 20%;
 }

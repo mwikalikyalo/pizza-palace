@@ -10,77 +10,60 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="form">
-      <h1 class="palace text-center">Welcome to Pizza Palace!<br> We'd like to take your order.</h1>
-      <form id="orders">
-        <div class="form-group">
-          <div class="col-md-6">
-            <label for="name">Your Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Name...">
-          </div>
-        <br><br>
-        
-        <h5>Kindly pick the following:</h5>
-        <div class="form-group">
-          <div class="col-md-6">
-            <label for="pizza-flavor">Pizza crust</label>
-            <select class="form-control col-lg-4 col-md-6" id="pizza-flavor" required>
-                <option>Flat Bread</option>
-                <option>Thick crust</option>
-                <option>Pan Pizza crust</option>
-                <option>Cracker crust</option>
-                <option>Thin crust</option>
-                <option>Stuffed crust</option>
-            </select>
-          </div>
+    <div class="container-fluid">
+      <div class="form text-center">
+        <h1 class="palace text-center">Welcome to Pizza Palace!<br> We'd like to take your order.</h1>
+        <form id="orders">        
+          <h5 class="fill">Kindly fill the following:</h5>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label for="name">Your Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Name...">
+            </div>
 
-          <div class="col-md-6">
-            <label for="pizza-size">Pizza size</label>
-            <select class="form-control" id="pizza-size" required>
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-            </select>
-          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <label for="pizza-flavor">Pizza crust</label>
+              <select class="form-control col-lg-4 col-md-6" id="pizza-flavor" required>
+                  <option>Flat Bread</option>
+                  <option>Thick crust</option>
+                  <option>Pan Pizza crust</option>
+                  <option>Cracker crust</option>
+                  <option>Thin crust</option>
+                  <option>Stuffed crust</option>
+              </select>
+            </div>
           
-          <div class="col-md-6">
-            <label for="pizza-size">Pizza toppings</label>
-            <select class="form-control" id="pizza-size" required>
-                <option>Pepperoni and garlic</option>
-                <option>Mushrooms and green peppers</option>
-                <option>Extra cheese</option>
-                <option>Chicken periperi</option>
-                <option>Beef barbecuque</option>
-                <option>Hawaian(Pineapples)</option>
-            </select>
-          </div>
-
+            <div class="col-md-6">
+              <label for="pizza-size">Pizza size</label>
+              <select class="form-control" id="pizza-size" required>
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+              </select>
+            </div>
             
-          
-       
+            <div class="col-md-6">
+              <label for="pizza-size">Pizza toppings</label>
+              <select class="form-control" id="pizza-size" required>
+                  <option>Pepperoni and garlic</option>
+                  <option>Mushrooms and green peppers</option>
+                  <option>Extra cheese</option>
+                  <option>Chicken periperi</option>
+                  <option>Beef barbecuque</option>
+                  <option>Hawaian(Pineapples)</option>
+              </select><br><br>
 
-    <!--social icons-->
-    <footer class="foot">
-      <div class="container-fluid socials d-flex justify-content-center flex-wrap">
-        <div>
-          <img src="images/social_icons/facebook.png" alt="facebook">
-        </div>
-        <div>
-          <img src="images/social_icons/pinterest.png" alt="pinterest">
-        </div>
-        <div class="c-sm-1">
-          <img src="images/social_icons/skype.png" alt="skype">
-        </div>
-        <div class="c-sm-1">
-          <img src="images/social_icons/twitter.png" alt="twitter">
-        </div>
-        <div class="c-sm-1">
-          <img src="images/social_icons/you_tube.png" alt="youtube">
-        </div>
+              <div id= "d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn-group btn-lg btn-warning"><a href="#" class="menu">Our Menu</a></button>
+              </div>
+        </form>
       </div>
-    </footer>
+    </div>
+  
 
   </div>
 </body>
 </html>
+
+
