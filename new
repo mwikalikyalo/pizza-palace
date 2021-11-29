@@ -1,43 +1,9 @@
- 
-  //function for placing an order
-  var form= document.getElementsById("forms");
-  var name= document.getElementById("yourname");
-  var pizzaCrust= document.getElementById("pizza-crust");
-  var pizzaSize=  document.getElementById("pizza-size");
-  var pizzaToppings= document.getElementById("pizza-toppings");
-  var pizzaNumber= document.getElementById("pizza-number");
-  var confirmOrder= document.getElementById("confirmorder");
-
-  form.addEventListener("confirmOrder",(e) => {
-      e.preventDefault();
-
-        checkInput();
-    });
-  
-    function checkInput(){
-      var name= name.value();
-      var pizzaCrust= pizzaCrust.value();
-      var pizzaSize= pizzaSize.value();
-      var pizzaToppings= pizzaToppings.value();
-      var pizzaNumber= pizzaNumber.value();
-      var crustCost;
-          if("pizzaCrust===small"){
-            crustCost= 300;   
-        }else if("pizzaCrust===medium"){
-            crustCost= 350;
-        }else if("pizzaCrust===large"){
-            crustCost= 450;
-        }
-      var toppingCost;
-          if("pizzaToppings===small"){
-              toppingCost= 250;
-          }else if("pizzaToppings===medium"){
-              toppingCost= 300;
-          }else if("pizzaToppings===large"){
-              toppingCost= 400;
-          }
-    }
-
+var name = capitalize_inputs($("input#name").val());
+    var size = $("#pizza-size").val();
+    var crust = $("#pizza-crust").val();
+    var toppings = $("#pizza-toppings").val();
+    var number = $("#pizza-number").val();
+    };
     
     //size prices
     var sizeCost; 
@@ -99,4 +65,3 @@
             $(".toppings").append('<tr><td id="pizza-toppings">' + toppings);
         }
         $(".name").text(name);
-  

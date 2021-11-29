@@ -18,12 +18,12 @@
           <div class="form-group">
             <div class="col-md-6">
               <label for="name">Your Name:</label>
-              <input type="text" class="form-control" id="name" placeholder="Name...">
+              <input type="text" class="form-control" id="yourname" placeholder="Name..." required>
             </div><br>
 
           <div class="form-group">
             <div class="col-md-6">
-              <label for="pizza-flavor">Pizza crust</label>
+              <label for="pizza-crust">Pizza crust</label>
               <select class="form-control col-lg-4 col-md-6" id="pizza-crust" required>
                   <option>Flat Bread</option>
                   <option>Thick crust</option>
@@ -56,11 +56,11 @@
 
             <div class="col-md-12">
               <label for="name">How many pizzas do you want?</label>
-              <input type="text" class="form-control" id="pizza-number" placeholder="Number..."><br><br>
+              <input type="text" class="form-control" id="pizza-number" placeholder="Number..." required><br><br>
             </div>
               
             <div id= "d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn-group btn-lg btn-warning" id="confirmorder"><a href="#" class="order-up">Confirm order</a></button>
+              <button class="btn-group btn-md btn-warning" id="confirmorder"><a href="#" class="order-up">Confirm order</a></button>
             </div>
         </form>
       </div>
@@ -68,6 +68,7 @@
   
 
   </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
