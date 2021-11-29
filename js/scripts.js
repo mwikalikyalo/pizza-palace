@@ -69,15 +69,17 @@ function update() {
 checkout.addEventListener("click", function(e){
   e.preventDefault();
 
-  checkOut();
+  checkOut()
 })
 
+//checkout
 function checkOut(){
-  var q1= prompt("Would you like your pizza to be delivered to you?");
-  if(q1=="yes"){
-    var q2= prompt("Please enter your location: ")
-    console.log(q2);
+  var q1= confirm("Would you like your pizza to be delivered to you?");
+  if(q1==true){
+    var q2= prompt("Where do you want it delievered at an extra cost of 300 shillings?");
+    alert(`Your pizza will be delievered to you in the next 40 minutes at ${q2}.`);
   }else{
-    console.log("Your order will take approxiamately 30 minutes to get to you. Thank you and have a great day.")
+    alert(`Thank you ${fname} for shopping with us. Hope to see you again soon.`);
   }
+ 
 }
