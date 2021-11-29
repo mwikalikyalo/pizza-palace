@@ -60,14 +60,37 @@
             </div>
               
             <div id= "d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn-group btn-md btn-warning" id="confirmorder"><a href="#" class="order-up">Confirm order</a></button>
+              <button class="btn-group btn-md btn-warning" id="confirmOrder">Confirm Order</button>
             </div>
         </form>
       </div>
     </div>
-  
+
+    <table class="table " id="table">
+      <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Size</th>
+            <th>Topping</th>
+            <th>Crust</th>
+            <th>Total</th>
+          </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+
+  </table>
+
+  <div class="text-center">
+      <h2 id="totalAmount"></h2>
+      <button class="checkout btn btn-sm mt-5 bg-warning" id="checkout">Checkout</button>
+  </div>
+</div>
 
   </div>
+ 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>

@@ -1,102 +1,83 @@
- 
-  //function for placing an order
-  var form= document.getElementsById("forms");
-  var name= document.getElementById("yourname");
-  var pizzaCrust= document.getElementById("pizza-crust");
-  var pizzaSize=  document.getElementById("pizza-size");
-  var pizzaToppings= document.getElementById("pizza-toppings");
-  var pizzaNumber= document.getElementById("pizza-number");
-  var confirmOrder= document.getElementById("confirmorder");
+//function for placing an order
+var form = document.getElementById("orders");
+var fNameElement = document.getElementById("yourname");
+var pizzaCrustElement = document.getElementById("pizza-crust");
+var pizzaSizeElement = document.getElementById("pizza-size");
+var pizzaToppingsElement = document.getElementById("pizza-toppings");
+var pizzaNumberElement = document.getElementById("pizza-number");
+var confirmOrderElement = document.getElementById("confirmOrder");
 
-  form.addEventListener("confirmOrder",(e) => {
-      e.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-        checkInput();
-    });
-  
-    function checkInput(){
-      var name= name.value();
-      var pizzaCrust= pizzaCrust.value();
-      var pizzaSize= pizzaSize.value();
-      var pizzaToppings= pizzaToppings.value();
-      var pizzaNumber= pizzaNumber.value();
-      var crustCost;
-          if("pizzaCrust===small"){
-            crustCost= 300;   
-        }else if("pizzaCrust===medium"){
-            crustCost= 350;
-        }else if("pizzaCrust===large"){
-            crustCost= 450;
-        }
-      var toppingCost;
-          if("pizzaToppings===small"){
-              toppingCost= 250;
-          }else if("pizzaToppings===medium"){
-              toppingCost= 300;
-          }else if("pizzaToppings===large"){
-              toppingCost= 400;
-          }
-    }
+  checkInput();
+  e.target.reset();
+});
 
-    
-    //size prices
-    var sizeCost; 
-        if (size === "Small") {
-            sizeCost = 400;
-        }else if (size === "Medium") {
-            sizeCost = 600;
-        }else if (size === "Large") {
-            sizeCost = 800;
-        };
+var orders= [];
 
-    //crust prices
-    var pricesCrust; 
-        if (crust === "stuffed crust") {
-            crustCost = 550;
-        }else if (crust === "thin crust") {
-            crustCost = 350;
-        }else if (crust === "cracker crust") {
-            crustCost = 500;
-        }else if (crust === "pan pizza crust") {
-            crustCost = 400;
-        }else if (crust === "thick crust") {
-            crustCost = 650;
-        }else if (crust === "flat bread crust") {
-            crustCost = 450;
-        };
+function checkInput() {
+  var fName= fNameElement.value;
+  var pizzaCrust = pizzaCrustElement.value;
+  var pizzaSize = pizzaSizeElement.value;
+  var pizzaToppings = pizzaToppingsElement.value;
+  var pizzaNumber = pizzaNumberElement.value;
+  var crustCost;
+  if (pizzaSize == "Small") {
+    crustCost = 300;
+  } else if (pizzaSize == "Medium") {
+    crustCost = 350;
+  } else if (pizzaSize == "Large") {
+    crustCost = 450;
+  }
+  var toppingCost;
+  if (pizzaSize == "Small") {
+    toppingCost = 250;
+  } else if (pizzaSize == "Medium") {
+    toppingCost = 300;
+  } else if (pizzaSize == "Large") {
+    toppingCost = 400;
+  } 
+  orders.push({
+      fName: fName,
+      pizzaCrust: pizzaCrust,
+      pizzaSize: pizzaSize,
+      pizzaToppings: pizzaToppings,
+      pizzaNumber: pizzaNumber,
+      crustCost: crustCost,
+      toppingCost: toppingCost,
+  });
+  console.log(orders);
+  update();
+};
 
-    //toppings
-    var pricesToppings;
-        if(toppings === "pepperoni and garlic") {
-            toppingCost = 150;
-        }else if (toppings === "mushrooms and green peppers"){
-            toppingCost = 150;
-        }else if (toppings === "bacon and cheddar cheese"){
-            toppingCost = 350;
-        }else if (toppings = "chicken periperi and mozarella cheese"){
-            toppingCost = 300;
-        }else if (toppings = "beef barbeceque and parmesan cheese"){
-            toppingCost = 200;
-        }else if (toppings = "Hawaian(Pineapples) and sausages"){
-            toppingCost = 250;
-        };
+function update() {
+  var table= $("#table");
+  table.find("tbody").html("");
+  orders.forEach (function(order){
+    table.find("tbody").append(`<tr>
+    <td>${order.fName}</td>
+    <td>${order.pizzaNumber}</td>
+    <td>${order.pizzaSize}</td>
+    <td>${order.pizzaToppings}</td>
+    <td>${order.pizzaCrust}</td>
+    <td>${parseInt((order.crustCost)+parseInt(order.toppingCost))*parseInt(order.pizzaNumber)}</td>
+  </tr>`)
+  });
+}
 
-    //prevent client from making another order
-        $('#placeorder').prop('disabled', true); 
-        $("#yourorder").show();
-        var price = (sizeCost + crustCost + toppingsCost);
-        var totalPrice = parseInt(price * number);
-        $(".salutation").text("Hey" + " " + name + ". Here's your order:");
-        $(".pizza-size").append('<tr><td id="pizza-size">' + size);
-        $(".number").append('<tr><td id="number">' + number);
-        $(".pizza-crust").append('<tr><td id="pizza-crust">' + crust);
-        $(".pizzaTotal1").append('<tr><td id="pizzaTotal1">' + totalPrice);
-        arrayTotal.push(totalPrice); 
-        if (toppings == "") {
-            $(".toppings").append('<tr><td id="pizza-toppings">' + "-");
-        }
-        if (toppings != "") {
-            $(".toppings").append('<tr><td id="pizza-toppings">' + toppings);
-        }
-        $(".name").text(name);
-  
+checkout.addEventListener("click", function(e){
+  e.preventDefault();
+
+  checkOut();
+})
+
+function checkOut(){
+  var q1= prompt("Would you like your pizza to be delivered to you?");
+  if(q1=="yes"){
+    var q2= prompt("Please enter your location: ")
+    console.log(q2);
+  }else{
+    console.log("Your order will take approxiamately 30 minutes to get to you. Thank you and have a great day.")
+  }
+}
